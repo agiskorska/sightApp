@@ -56,6 +56,10 @@ class App extends React.Component {
     this.setState({ workTime: 0, status: false});
   }
 
+  closeApp() {
+    window.close();
+  }
+
   render() {
     // let timeLeft = this.toMMSS(this.workTime);
     const { workTime, status } = this.state;
@@ -91,7 +95,7 @@ class App extends React.Component {
               </div>
             )
         }
-        <button className="btn btn-close">X</button>
+        <button className="btn btn-close" onClick={this.closeApp}>X</button>
       </div>
     )
   }
